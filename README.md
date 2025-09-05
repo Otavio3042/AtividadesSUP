@@ -12,5 +12,5 @@ As atividades foram realizadas nos computadores **Ramses** e **Ahmes**, conforme
 ## Objetivo
 O objetivo deste trabalho é aplicar os conceitos teóricos aprendidos em aula, exercitando a programação em baixo nível e o uso de ferramentas de montagem de código, consolidando assim o aprendizado em **Sistemas Computacionais**.
 
-## Link de acesso para o Relatório
+## Link de acesso direto para o Relatório (Google Documentos)
 https://docs.google.com/document/d/16rPhWz-gRbvX4eHdLk-O4A3rhsbmchZ4bS9vaa-tMS0/edit?usp=sharing
