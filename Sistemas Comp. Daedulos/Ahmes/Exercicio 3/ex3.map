@@ -1,0 +1,11 @@
+Símbolo         Valor Decimal   Valor Hexadecimal
+-------         -------------   -----------------
+N                         128                  80
+E                         129                  81
+CONT                      130                  82
+C0                        131                  83
+CM1                       132                  84
+C1                        133                  85
+LOOP                        8                   8
+MUDAR                      14                   E
+FIM                        30                  1E

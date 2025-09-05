@@ -1,0 +1,38 @@
+; --------- DADOS (a partir de 128) ---------
+ORG 128
+n:    DB 5      ; 128 quantidade de posições a zerar
+e:    DB 138    ; 129 endereço inicial (primeira posição a zerar)
+cont: DB 0      ; 130 contador de laço
+c0:   DB 0      ; 131 constante 0
+cm1:  DB 255    ; 132 constante -1 (255 = -1 em 8 bits)
+c1:   DB 1      ; 133 constante +1
+
+; --------- CÓDIGO (a partir de 0) ----------
+ORG 0
+    LDA 129        ; carrego no acumulador o endereço inicial
+    STA 15         ; guardo esse endereço na memória 15 pra usar depois, escreve e no operando da STA em WRITE (auto-modificação)
+
+    LDA 128        ; carrego no acumulador a variavel N
+    STA 130        ; armazeno no contador
+
+LOOP:              ; carrego o contador no acumulador, endereço 8
+    LDA 130        ; testo se o contador é zero
+    JZ 30          ; se cont == 0, fim
+
+    LDA 131        ; carrego 0 no acumulador
+MUDAR:
+    STA 0          ; o operando desta STA (byte em 15) foi escrito acima 
+                   ;     e será incrementado a cada volta do laço
+
+    LDA 130        ; cont--
+    ADD 132
+    STA 130
+
+    LDA 15         ; pega o operando atual de MUDAR (endereço que acabamos de zerar)
+    ADD 133        ; +1 -> próxima posição
+    STA 15         ; grava de volta no operando de MUDAR
+
+    JMP 8          ; volta para LOOP
+
+FIM:               ; endereço 30
+    HLT
