@@ -1,0 +1,16 @@
+ORG 128
+var1: DB 4
+var2: DB 2
+r: DB 0
+dec: DB 1
+ORG 0
+LDR A r
+ADD A var1
+STR A r
+LDR A var2
+SUB A dec
+STR A var2
+LDR A var2
+JZ FIM
+JMP 0
+FIM:HLT 

@@ -1,0 +1,14 @@
+ORG 128
+var1: DB 10
+var2: DB 25
+res: DB 0
+ORG 0
+LDR A var1
+ADD A var2
+JC 10
+STR A res
+JMP 14
+LDR B #255
+STR B 131
+HLT
+

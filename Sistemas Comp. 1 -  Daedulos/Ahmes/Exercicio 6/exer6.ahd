@@ -1,0 +1,70 @@
+ORG 126
+saida:      DB 0
+
+ORG 128
+letraE:     DB 69
+letra_r:    DB 114
+letra_i:    DB 105
+letra_c:    DB 99
+letra_k:    DB 107
+letraR:    DB 82
+letra_o:    DB 111
+letra_d:    DB 100
+letra_i2:   DB 105
+letra_g:    DB 103
+letra_u:    DB 117
+letra_e2:   DB 115
+letra_s:    DB 115
+letra_esp:  DB 32
+letra_T:    DB 84
+letra_a:    DB 97
+letra_v:    DB 118
+letra_a2:   DB 97
+letra_r2:   DB 114
+letra_e3:   DB 115
+letra_s2:   DB 115
+
+ORG 0
+LDA letraE      ; Carrega 'E'
+STA saida
+LDA letra_r     ; Carrega 'r'
+STA saida
+LDA letra_i     ; Carrega 'i'
+STA saida
+LDA letra_c     ; Carrega 'c'
+STA saida
+LDA letra_k     ; Carrega 'k'
+STA saida
+LDA letraR     ; Carrega 'R'
+STA saida
+LDA letra_o     ; Carrega 'o'
+STA saida
+LDA letra_d     ; Carrega 'd'
+STA saida
+LDA letra_i2    ; Carrega 'i'
+STA saida
+LDA letra_g     ; Carrega 'g'
+STA saida
+LDA letra_u     ; Carrega 'u'
+STA saida
+LDA letra_e2    ; Carrega 'e'
+STA saida
+LDA letra_s     ; Carrega 's'
+STA saida
+LDA letra_esp   ; Carrega ' '
+STA saida
+LDA letra_T     ; Carrega 'T'
+STA saida
+LDA letra_a     ; Carrega 'a'
+STA saida
+LDA letra_v     ; Carrega 'v'
+STA saida
+LDA letra_a2    ; Carrega 'a'
+STA saida
+LDA letra_r2    ; Carrega 'r'
+STA saida
+LDA letra_e3    ; Carrega 'e'
+STA saida
+LDA letra_s2    ; Carrega 's'
+STA saida
+HLT

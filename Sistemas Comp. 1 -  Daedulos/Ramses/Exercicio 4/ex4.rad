@@ -1,0 +1,20 @@
+ORG 128
+var1: 30 DB
+var2: 10 DB
+var3: 20 DB
+maior: 0 DB
+ORG 0
+LDR A var1
+STR A maior
+LDR B var2
+SUB B maior
+JN 14
+LDR A var2
+STR A maior
+LDR X var3
+SUB X maior
+JN 24
+LDR A var3
+STR A maior
+HLT
+

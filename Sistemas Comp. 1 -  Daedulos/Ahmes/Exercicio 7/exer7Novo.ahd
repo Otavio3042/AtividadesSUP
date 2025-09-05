@@ -1,0 +1,14 @@
+var1: DB 2
+var2: DB 3 
+res: DB 0
+cons: DB 1      
+LDA res
+ADD var1
+STA res 
+LDA var2  
+SUB cons
+STA var2
+LDA var2	 
+JNZ 4	 
+LDA res	 
+HLT

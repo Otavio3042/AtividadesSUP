@@ -1,0 +1,38 @@
+ORG 128
+numB: DB 5
+resB1: DB 0
+resB2: DB 0
+numW: DW 300
+resW1: DW 0
+resW2: DW 0
+c1: DB 1
+msB: DB 128
+msW: DB 128 
+ORG 0
+LDR A numB ; complemento de dois
+NOT A
+ADD A c1
+STR A resB1
+LDR B numB ; sinal magnitude
+OR B msB
+STR B resB2
+LDR A numW
+NOT A
+ADD A c1
+STR A resW1
+JC CARRY
+LDR A 132
+NOT A 
+ADD A c1
+STR A 134
+JMP PROXIMO
+CARRY: LDR A numW
+ADD A c1
+NOT A
+STR A resW1
+PROXIMO: LDR A 132 ;sinal magnitude
+STR A 135
+LDR A numW
+OR A msW
+STR A 136
+HLT
