@@ -1,7 +1,0 @@
-LDR A #0
-STR A 128 
-LDR B #0 
-STR B 129
-LDR X #0
-STR X 130
-HLT
